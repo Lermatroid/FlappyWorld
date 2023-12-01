@@ -9,6 +9,7 @@ public class PortalController : MonoBehaviour
     public int rotationSpeed = 75;
     public Object scene;
     public bool usable = true;
+    public string nextSceneName;
 
     // Update is called once per frame
     void Update()
@@ -20,7 +21,7 @@ public class PortalController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && usable)
         {
-            SceneManager.LoadScene(scene.name);
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 }
